@@ -1,29 +1,25 @@
 # CS-180-project
 ## Introduction
 
-In the digital age, social interaction platforms have transcended traditional communication barriers, enabling people from all over the world to connect, share, and engage with content in real-time. Recognizing the pivotal role these platforms play in today's social fabric, our Java project team is excited to embark on creating a robust, user-friendly social interaction platform. This platform is designed to foster a dynamic community where users can effortlessly interact and express themselves. The project encapsulates several critical features that aim to provide a comprehensive social experience tailored to meet the diverse needs of its users.
+In the digital age, social interaction platforms have transcended traditional communication barriers, enabling people from all over the world to connect, share, and engage with content in real-time. Recognizing the pivotal role these platforms play in today's social fabric, this Java project team is excited to embark on creating a robust, user-friendly social interaction platform. This platform is designed to foster a dynamic community where users can effortlessly interact and express themselves. The project encapsulates several critical features that aim to provide a comprehensive social experience tailored to meet the diverse needs of its users.
 
-**New User Account Creation and Secure Login:** At the heart of our platform is a user-friendly interface for account creation, ensuring a smooth and welcoming entry point for new users. Security is paramount; therefore, each account will be safeguarded with password-protected logins, ensuring that user data remains secure and private.
+**New User Account Creation and Secure Login:** At the heart of this platform is a user-friendly interface for account creation, ensuring a smooth and welcoming entry point for new users. Security is paramount; therefore, each account will be safeguarded with password-protected logins, ensuring that user data remains secure and private.
 
-**Interactive Post and Feed System:** Central to our platform is the ability to make posts and display them in a personalized feed. This feed will not only show the user's own posts but also aggregate and display posts from their friends, creating a continuous stream of content that is relevant and engaging.
+**Interactive Post and Feed System:** Central to this platform is the ability to make posts and display them in a personalized feed. This feed will not only show the user's own posts but also aggregate and display posts from their friends, creating a continuous stream of content that is relevant and engaging.
 
-**Engagement Tools:** To foster interaction, our platform will include mechanisms for upvoting or downvoting posts, which helps in curating content quality and relevance. Users can also hide posts from their feed, allowing for a customizable content experience. Comments on posts further engage the community, allowing for discussions and interactions within the content shared. Any user can upvote or downvote comments, contributing to the community moderation of the content. Importantly, post owners and comment creators will have the authority to delete comments to manage the interactions on their contributions effectively.
+**Engagement Tools:** To foster interaction, this platform will include mechanisms for upvoting or downvoting posts, which helps in curating content quality and relevance. Users can also hide posts from their feed, allowing for a customizable content experience. Comments on posts further engage the community, allowing for discussions and interactions within the content shared. Any user can upvote or downvote comments, contributing to the community moderation of the content. Importantly, post owners and comment creators will have the authority to delete comments to manage the interactions on their contributions effectively.
 
-In conclusion, our project is not just about coding a platform but about creating a vibrant community where users feel secure, connected, and engaged. By implementing these features, we aim to build a comprehensive social interaction platform that not only meets but exceeds the expectations of today’s digital natives. Through this project, we are excited to contribute to the evolving landscape of social media platforms, where technology meets human interaction.
+In conclusion, this project is not just about coding a platform but about creating a vibrant community where users feel secure, connected, and engaged. By implementing these features, we aim to build a comprehensive social interaction platform that not only meets but exceeds the expectations of today’s digital natives. Through this project, we are excited to contribute to the evolving landscape of social media platforms, where technology meets human interaction.
 
-## Submission
-1: Ryan Hung submitted report and video on brightspace.
-
-2: Yanan He submitted Vocareum workspace.
 
 ## GUI
 ### Instruction for compiling:
 
-1. Click run button on your IDE for Server.java
+1. Click run button on ythis IDE for Server.java
 2. Run CLientGUI.java to get started.
 2. Run ClientGUI.java to get started.
 3. You can check the userFile.txt to login with an exist account or create a new account.
-4. Check the main menu on our GUI panel to play with all functions we have shown on the buttons.
+4. Check the main menu on this GUI panel to play with all functions we have shown on the buttons.
 5. After finishing all you want to do, you will go back to the main menu and click logout, then confirm the logout information to exist the whole program successfully.
 
 
@@ -43,7 +39,7 @@ In conclusion, our project is not just about coding a platform but about creatin
   An automatic test through running the RunLocalTest.java file would check each method from the Account and AccountDatabase class as well as the test for the Post and Replies methods. We've also included two manual tests in the form of Main.java and MainPost.java that check for account/post creation success in the text files. The manual tests take inputs and create new Accounts/Posts/Replies that can be stored in the textfiles.
 
 
-As our project aims to build a fully functional Social Media Platform from the ground up, we focus initially on the database side. Our goal is to create a robust and efficient database capable of managing user data, interactions, and content in a thread-safe manner. This database will serve as the backbone for a social media application, supporting features like user profiles, friend interactions, content posting, and more.
+As this project aims to build a fully functional Social Media Platform from the ground up, we focus initially on the database side. this goal is to create a robust and efficient database capable of managing user data, interactions, and content in a thread-safe manner. This database will serve as the backbone for a social media application, supporting features like user profiles, friend interactions, content posting, and more.
 
 - Database Design Considerations
   - Data Storage: Deciding on the structure for storing user profiles, friend relationships, posts, comments, and reactions.
@@ -55,17 +51,17 @@ As our project aims to build a fully functional Social Media Platform from the g
 
 ### Server
 
-This server is the backbone of our social interaction platform, designed to handle multiple client connections concurrently and manage interactions with the backend database. It supports a range of features from user management to post interactions, ensuring smooth and secure communication between the client applications and the database.
+This server is the backbone of this social interaction platform, designed to handle multiple client connections concurrently and manage interactions with the backend database. It supports a range of features from user management to post interactions, ensuring smooth and secure communication between the client applications and the database.
 
-The server component of our social interaction platform plays a critical role in maintaining robust communication and data management. Designed to support a multitude of client connections simultaneously, this server is the backbone that supports the seamless operation of our social network. Its capabilities ensure that each user interaction is processed efficiently and securely, facilitating a dynamic community environment. Our server ensures that all login processes are secure, managing session data meticulously to preserve user privacy and prevent unauthorized access.
+The server component of this social interaction platform plays a critical role in maintaining robust communication and data management. Designed to support a multitude of client connections simultaneously, this server is the backbone that supports the seamless operation of this social network. Its capabilities ensure that each user interaction is processed efficiently and securely, facilitating a dynamic community environment. this server ensures that all login processes are secure, managing session data meticulously to preserve user privacy and prevent unauthorized access.
 
 ### ClientGUI
 
-This ClientGUI.java is tailored to enhance user engagement through a visually appealing and intuitive layout that supports real-time communication and dynamic content updates. Key features include a straightforward navigation system, real-time updates for posts and comments to ensure an engaging social experience, secure authentication for user logins, and interactive elements that allow users to easily post content, comment, and manage social interactions such as upvotes, downvotes, and friendships. To get started with this GUI, users should have the Java Runtime Environment (JRE) 8 or higher installed on their systems. Additionally, the server component of our platform must be operational to support all client interactions. To install the Client GUI, download the latest version from our repository, and follow the setup instructions to ensure the GUI operates correctly with our server backend, providing a smooth and responsive user experience.
+This ClientGUI.java is tailored to enhance user engagement through a visually appealing and intuitive layout that supports real-time communication and dynamic content updates. Key features include a straightforward navigation system, real-time updates for posts and comments to ensure an engaging social experience, secure authentication for user logins, and interactive elements that allow users to easily post content, comment, and manage social interactions such as upvotes, downvotes, and friendships. To get started with this GUI, users should have the Java Runtime Environment (JRE) 8 or higher installed on their systems. Additionally, the server component of this platform must be operational to support all client interactions. To install the Client GUI, download the latest version from this repository, and follow the setup instructions to ensure the GUI operates correctly with this server backend, providing a smooth and responsive user experience.
 
 ### Account.java
 
-Account.java is central to managing user accounts within our Social Media Platform. It facilitates creating user profiles, handling login credentials, managing friends and block lists, and securing accounts with security questions and answers. This class serves as the foundation for user interaction on the platform.
+Account.java is central to managing user accounts within this Social Media Platform. It facilitates creating user profiles, handling login credentials, managing friends and block lists, and securing accounts with security questions and answers. This class serves as the foundation for user interaction on the platform.
 - Functionality:
   - Creation and Management of User Accounts: Users can sign up, set up their profiles, and update their account details.
   - Authentication: Manages password-protected user login, ensuring secure access to accounts.
@@ -85,7 +81,7 @@ While Account.java provides the basis for user identity and security, integratin
 
 ### AccountMod.java
 
-AccountMod.java is a comprehensive class designed to manage the accounts within our Social Media Platform. It offers a full suite of functionalities including login, registration, logout procedures, friendship and blocking mechanisms, security question verification, and data persistence to a file. This class acts as a crucial component of the platform's backend, ensuring secure and efficient management of user accounts. AccountMod.java is vital for the seamless operation of the social media platform, providing robust mechanisms for account management, user interaction, and data security. By handling the complexities of user account data, it enables a secure and engaging environment for users to connect and share content.
+AccountMod.java is a comprehensive class designed to manage the accounts within this Social Media Platform. It offers a full suite of functionalities including login, registration, logout procedures, friendship and blocking mechanisms, security question verification, and data persistence to a file. This class acts as a crucial component of the platform's backend, ensuring secure and efficient management of user accounts. AccountMod.java is vital for the seamless operation of the social media platform, providing robust mechanisms for account management, user interaction, and data security. By handling the complexities of user account data, it enables a secure and engaging environment for users to connect and share content.
 - Functionality
   - Account Management: Supports registering new accounts, logging in with existing credentials, and securely logging out.
   - Friendship and Blocking: Facilitates adding and removing friends, managing block lists to control user interactions within the platform.
@@ -149,7 +145,7 @@ Post.java is a Java class designed to model a social media post, encapsulating f
   - Enhances Post.java's functionality by adding depth to post interactions, allowing users to respond to posts with replies, which can themselves be upvoted or downvoted.
 
   ### AccountInfo
-  AccountInfo.java is a Java class that extends off of Account.java. AccountInfo includes all the miscellaneous details of the Account such as birthdays and pronouns. We will implement this to our project in the future when we ask for user information in the later phases.
+  AccountInfo.java is a Java class that extends off of Account.java. AccountInfo includes all the miscellaneous details of the Account such as birthdays and pronouns. We will implement this to this project in the future when we ask for user information in the later phases.
   
   ### LogIn
   LogIn.java is a Java class that is used to help facilitate the process of managing Accounts that would be stored via the AccountDatabase class. It's used in conjunction with the Main.java file to create, login, and to check whether the account exists the text file or not. This class also implements the ILogIn interface.
