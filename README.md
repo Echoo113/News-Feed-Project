@@ -156,7 +156,4 @@ Post.java is a Java class designed to model a social media post, encapsulating f
   ### BadDataException
   BadDataException was created to report bad data when handling inputs. It extends off of the Exception class and has a String field that says what input error caused the exception to be thrown, this is only for the test case since all data will be processed by the server before entering the txt file.
 
-### MainMerge
-The main merge is the most basic and important function to get combined functionality.It can login or create an account, and also post and reply to the post. We put all required functions for this project in readme and **we will merge it into GUI later for phase 3.**
-
 
