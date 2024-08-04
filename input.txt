@@ -1,0 +1,39 @@
+register
+lihua_123456_my father's name_liqiang_[]_[]
+register
+zhangsan_123456_my mother's name_zhangsi_[]_[]
+register
+sunyi_123456_my brother's name_suner_[]_[]
+login
+sunyi 123456
+login
+sunyi 123
+verifyQuestion
+1 liqiang
+verifyQuestion
+1 li
+addFriend
+1 2
+addFriend
+1 3
+deleteFriend
+1 2
+addBlock
+1 2
+isBlock
+1 2
+deleteBlock
+1 2
+isBlock
+1 2
+isFriend
+1 2
+isFriend
+1 3
+addFriend
+1 2
+register
+wangwu_123456_my brother's name_liu_[]_[]
+logout
+4
+saveData

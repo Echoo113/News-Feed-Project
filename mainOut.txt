@@ -1,0 +1,17 @@
+register success
+register success
+register success
+login success
+login fail
+answer correct
+answer incorrect
+add friend 1 2 success
+add friend 1 3 success
+delete friend 1 2 success
+add block 1 2 success
+delete block 1 2 success
+1-2 are not friends
+1-3 are friends
+add friend 1 2 success
+register success
+logout success
