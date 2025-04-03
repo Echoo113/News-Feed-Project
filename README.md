@@ -1,4 +1,4 @@
-# 💬 CS-180: My Social Media Platform 👩‍💻🌈
+# 💬  My Social Media Platform 👩‍💻🌈
 
 > Built with Java, powered by snacks and determination.  
 > (Yes, I made it all by myself 😅)
