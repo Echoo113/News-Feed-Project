@@ -1,159 +1,152 @@
-# CS-180-project
-## Introduction
+# 💬 CS-180 Project: Social Interaction Platform
 
-In the digital age, social interaction platforms have transcended traditional communication barriers, enabling people from all over the world to connect, share, and engage with content in real-time. Recognizing the pivotal role these platforms play in today's social fabric, this Java project team is excited to embark on creating a robust, user-friendly social interaction platform. This platform is designed to foster a dynamic community where users can effortlessly interact and express themselves. The project encapsulates several critical features that aim to provide a comprehensive social experience tailored to meet the diverse needs of its users.
+## 🚀 Introduction
 
-**New User Account Creation and Secure Login:** At the heart of this platform is a user-friendly interface for account creation, ensuring a smooth and welcoming entry point for new users. Security is paramount; therefore, each account will be safeguarded with password-protected logins, ensuring that user data remains secure and private.
+In today’s digital world, social platforms break communication barriers and bring people together 🌍. This Java-based project aims to create a robust, user-friendly **social interaction platform** where users can post, connect, and engage in meaningful ways 💬🤝.
 
-**Interactive Post and Feed System:** Central to this platform is the ability to make posts and display them in a personalized feed. This feed will not only show the user's own posts but also aggregate and display posts from their friends, creating a continuous stream of content that is relevant and engaging.
+### 🔑 Key Features
 
-**Engagement Tools:** To foster interaction, this platform will include mechanisms for upvoting or downvoting posts, which helps in curating content quality and relevance. Users can also hide posts from their feed, allowing for a customizable content experience. Comments on posts further engage the community, allowing for discussions and interactions within the content shared. Any user can upvote or downvote comments, contributing to the community moderation of the content. Importantly, post owners and comment creators will have the authority to delete comments to manage the interactions on their contributions effectively.
+- **👤 New User Account Creation & Secure Login**  
+  Smooth sign-up and password-protected login system ensures safe access to personalized content 🔐.
 
-In conclusion, this project is not just about coding a platform but about creating a vibrant community where users feel secure, connected, and engaged. By implementing these features, we aim to build a comprehensive social interaction platform that not only meets but exceeds the expectations of today’s digital natives. Through this project, we are excited to contribute to the evolving landscape of social media platforms, where technology meets human interaction.
+- **📰 Interactive Post & Feed System**  
+  Create posts and see them appear in a personalized feed — with friends’ updates too 🧑‍🤝‍🧑.
 
+- **⚙️ Engagement Tools**  
+  - Upvote/downvote posts 👍👎  
+  - Comment, upvote/downvote comments 💬  
+  - Hide posts 🙈  
+  - Delete your own comments/trash control 🗑️  
 
-## GUI
-### Instruction for compiling:
+We’re not just building code — we’re crafting a **community** 💖.
 
-1. Click run button on ythis IDE for Server.java
-2. Run CLientGUI.java to get started.
-2. Run ClientGUI.java to get started.
-3. You can check the userFile.txt to login with an exist account or create a new account.
-4. Check the main menu on this GUI panel to play with all functions we have shown on the buttons.
-5. After finishing all you want to do, you will go back to the main menu and click logout, then confirm the logout information to exist the whole program successfully.
+---
 
+## 🖥️ GUI Instructions
 
-## Database
+1. ▶️ Click **Run** on `Server.java`
+2. ▶️ Then run `ClientGUI.java`  
+3. 📂 Log in using an existing account from `userFile.txt` or create a new one.
+4. 🧭 Explore the main menu GUI to access all features.
+5. 🚪 When done, click **Logout** to safely exit the program.
 
-### Testing Notes:
-  #### AccountDatabase.java and AccountMod.java are the same thing, but one is for testing for the test case to make sure all methods work, one will be implemented as the primary code which runs in the main method.
-  
-  Testing will take place in two different locations for the user data for accounts. We will have UserDatabase.Java and Accounts.Java tested in the UserDatabaseTest class. The test handling checks if the methods in both classes work together, which helps assist in the confirmation  of all methods working. If you want to test it manually, the database for all modifications of the Account class will be accessible in the main method, and file output will still be present to be checked.
- 
-  ### Instructions for Compiling:
-  1. Compile all the interface files
-  2. Compile Account, Post, and Replies
-  3. Compile the rest of the other classes (except for Main.java and MainPost.java)
-  4. Compile the Main classes
+---
 
-  An automatic test through running the RunLocalTest.java file would check each method from the Account and AccountDatabase class as well as the test for the Post and Replies methods. We've also included two manual tests in the form of Main.java and MainPost.java that check for account/post creation success in the text files. The manual tests take inputs and create new Accounts/Posts/Replies that can be stored in the textfiles.
+## 🗄️ Database
 
+We focus first on building a powerful, thread-safe backend that manages:
 
-As this project aims to build a fully functional Social Media Platform from the ground up, we focus initially on the database side. this goal is to create a robust and efficient database capable of managing user data, interactions, and content in a thread-safe manner. This database will serve as the backbone for a social media application, supporting features like user profiles, friend interactions, content posting, and more.
+- 👥 User profiles & authentication
+- 🤝 Friend/block relationships
+- 📝 Post and comment data
+- 🔒 Concurrency control for multi-client usage
 
-- Database Design Considerations
-  - Data Storage: Deciding on the structure for storing user profiles, friend relationships, posts, comments, and reactions.
-  - Access Patterns: Efficiently accessing and updating user data, posts, and interactions.
-  - Concurrency Control: Techniques to ensure thread safety, allowing the server to interact with multiple clients simultaneously without data corruption or loss.
-  - Scalability: Designing the database to efficiently handle growth in the number of users and their interactions.
-    
+### 🧪 Testing Notes
 
+- `AccountDatabase.java` and `AccountMod.java` offer the same functionality; one is for testing.
+- Testing is done via:
+  - `UserDatabaseTest.java`
+  - Manual: `Main.java`, `MainPost.java`
+  - Auto: `RunLocalTest.java`
 
-### Server
+### ⚙️ Compilation Steps
 
-This server is the backbone of this social interaction platform, designed to handle multiple client connections concurrently and manage interactions with the backend database. It supports a range of features from user management to post interactions, ensuring smooth and secure communication between the client applications and the database.
+1. Compile all interface files
+2. Compile `Account.java`, `Post.java`, `Replies.java`
+3. Compile remaining classes (excluding `Main.java`, `MainPost.java`)
+4. Compile `Main.java`, `MainPost.java` last
 
-The server component of this social interaction platform plays a critical role in maintaining robust communication and data management. Designed to support a multitude of client connections simultaneously, this server is the backbone that supports the seamless operation of this social network. Its capabilities ensure that each user interaction is processed efficiently and securely, facilitating a dynamic community environment. this server ensures that all login processes are secure, managing session data meticulously to preserve user privacy and prevent unauthorized access.
+---
 
-### ClientGUI
+## 🧩 Component Breakdown
 
-This ClientGUI.java is tailored to enhance user engagement through a visually appealing and intuitive layout that supports real-time communication and dynamic content updates. Key features include a straightforward navigation system, real-time updates for posts and comments to ensure an engaging social experience, secure authentication for user logins, and interactive elements that allow users to easily post content, comment, and manage social interactions such as upvotes, downvotes, and friendships. To get started with this GUI, users should have the Java Runtime Environment (JRE) 8 or higher installed on their systems. Additionally, the server component of this platform must be operational to support all client interactions. To install the Client GUI, download the latest version from this repository, and follow the setup instructions to ensure the GUI operates correctly with this server backend, providing a smooth and responsive user experience.
+### 🌟 Server.java
 
-### Account.java
+The core of multi-client interaction — manages sessions, security, and database operations. Handles login, post actions, and ensures secure, concurrent access 🔁🔐.
 
-Account.java is central to managing user accounts within this Social Media Platform. It facilitates creating user profiles, handling login credentials, managing friends and block lists, and securing accounts with security questions and answers. This class serves as the foundation for user interaction on the platform.
-- Functionality:
-  - Creation and Management of User Accounts: Users can sign up, set up their profiles, and update their account details.
-  - Authentication: Manages password-protected user login, ensuring secure access to accounts.
-  - Friendship and Block List Management: Allows users to add or remove friends and manage their block lists to customize their social experience.
-  - Security Questions and Answers: Enhances account security by enabling password recovery through security questions.
-- Testing:
-  - Account Creation and Authentication: Verification of the signup process, login functionality, and security question integration for account recovery.
-  - Friendship Management: Testing the addition and removal of friends, ensuring updates are reflected accurately.
-  - Block List Management: Confirming that blocking and unblocking users function as intended.
-  - Data Integrity and Security: Ensuring that user data, including passwords and security answers, is handled securely and that account recovery mechanisms are robust.
-- Relationships
-  - Implements IAccount interface
-  - Interaction with Other Components:While primarily focused on user account management, Account.java indirectly interacts with posting and commenting functionalities by identifying user actions with their respective accounts.
-  - Social Interactions: Through the friends and block lists, it determines the scope of social interactions a user can have, influencing how posts and comments are viewed and interacted with on the platform.
-  - Enhanced Functionality with Additional Modules:
-While Account.java provides the basis for user identity and security, integrating with modules like Post.java and Replies.java extends its functionality into the realm of content creation and interaction, allowing for a comprehensive social media experience.
+---
 
-### AccountMod.java
+### 🪟 ClientGUI.java
 
-AccountMod.java is a comprehensive class designed to manage the accounts within this Social Media Platform. It offers a full suite of functionalities including login, registration, logout procedures, friendship and blocking mechanisms, security question verification, and data persistence to a file. This class acts as a crucial component of the platform's backend, ensuring secure and efficient management of user accounts. AccountMod.java is vital for the seamless operation of the social media platform, providing robust mechanisms for account management, user interaction, and data security. By handling the complexities of user account data, it enables a secure and engaging environment for users to connect and share content.
-- Functionality
-  - Account Management: Supports registering new accounts, logging in with existing credentials, and securely logging out.
-  - Friendship and Blocking: Facilitates adding and removing friends, managing block lists to control user interactions within the platform.
-  - Security Features: Incorporates security question verification for added account security, allowing users to recover access to their accounts.
-  - Data Persistence: Implements functionality to save account data to a specified file, ensuring data persistence across sessions.
--Testing
-  -The AccountMod class has been rigorously tested to ensure reliability and security:
-  - Account Registration and Login: Verifies that new users can register and existing users can log in with their credentials.
-  - Logout and Data Integrity: Ensures that logging out updates friend and block lists appropriately and maintains data integrity.
-  - Friendship and Blocking Mechanisms: Confirms the correct functionality of adding, removing friends, and managing block lists.
-  - Security Question Verification: Tests the security question and answer mechanism for account recovery.
-  - Data Persistence: Validates the saving and loading of account data, ensuring that user information is correctly persisted across sessions.
--Relationships
-  - Implements IAccountDatabase interface
-  - User and Account Interaction: Directly manages user accounts, serving as the primary interface for user interactions within the platform.
-  - Social Features Integration: Works closely with other components (like Post.java and Replies.java) to link account actions with social interactions, such as posting, commenting, and reacting to content.
-  -Security and Data Management: Interacts with system security features to protect user data and with file management systems to persist account information.
--How to Use
-  - Initialization: Create an instance of AccountDatabase with the path to the data file where account information will be stored.
-  - Registering Accounts: Use RegisterAccount to add new users to the platform.
-  - Login and Logout: Manage user sessions with Login and Logout methods.
-  - Friendship and Blocking: Utilize AddFriend, DeleteFriend, AddBlack, and DeleteBlack to manage user relationships.
-Data Persistence: Regularly call SaveData to ensure all changes are persisted to the file system.
+Provides a visually appealing and intuitive interface. Key highlights:
 
+- 🔄 Real-time updates
+- 🖱️ Easy navigation
+- ✅ Secure login
+- 🗳️ Interactive buttons (post/comment/upvote)
+- 💻 Requires Java Runtime Environment 8+
 
+---
 
+### 👤 Account.java
 
+Manages users and their social connections:
 
+- Sign up / login / recover password 🔑  
+- Add/remove friends 🙋‍♂️❌  
+- Block/unblock users 🚫  
+- Secure Q&A for password recovery ❓  
+- Implements `IAccount` interface
 
+---
 
+### 🛠️ AccountMod.java
 
+Handles file-based storage of account data:
 
+- Save/load from files 📁  
+- Friend/block list updates 🤝🚫  
+- Used in backend operations  
+- Implements `IAccountDatabase` interface  
 
-### Post.java
+---
 
-Post.java is a Java class designed to model a social media post, encapsulating functionalities such as upvoting, downvoting, commenting, and view counting. It implements the IPost interface, offering a structured way to manage post data and user interactions. The class supports basic post operations like creation, deletion, and updates, along with managing upvotes, downvotes, and comments. 
-- Functionality: Allows creating, modifying, upvoting, downvoting, and commenting on posts. Each post tracks its viewers and interactions (upvotes/downvotes) uniquely.
-- Testing: Tested to ensure functionality like upvoting/downvoting behaves as expected, comments are added/removed correctly, and view counts are accurate. Relationships between posts and comments are verified for consistency.
-- Features:
-  - Creation, deletion, and modification of posts.
-  - Upvote and downvote mechanisms.
-  - Tracking of view numbers.
-  - Management of comments, which can be extended to include replies when used in conjunction with Replies.java.
-- Relationships:
-  - Implements the **IPost** interface. Uses the javax.xml.stream.events. Comment for managing comments within a post.
-  - Interact with Replies.java. While **Post.java** manages the core details and interactions of a social media post, **Replies.java** complements it by managing the replies associated with each post. Each reply in **Replies.java** is linked to a post through the postID, allowing for a structured and interconnected social media interaction model. This allows for a hierarchical structure where posts can have multiple replies, and each reply is directly associated with its parent post.
+### 📝 Post.java
 
- ### Replies.java
+Represents each post in the platform:
 
- Replies.java is a Java class dedicated to managing replies to social media posts. It supports operations such as creating, deleting, and modifying replies, in addition to handling upvotes and downvotes on each reply. This class is designed to work in conjunction with Post.java to offer a comprehensive system for post and reply interactions within a social media framework.
+- Upvote/downvote 👍👎  
+- Commenting 🗨️  
+- Track views 🔢  
+- Implements `IPost` interface  
+- Links with `Replies.java` for threaded discussion
 
-- Functionality: Manages the lifecycle of replies (create, delete, modify) and interactions (upvote, downvote).
-- Testing: Conducted with JUnit to verify accurate functionality for creating, deleting, and modifying replies. Ensures upvote and downvote actions are correctly recorded and associated with the right user and reply.
-- Features:
-  - Creation, deletion, and modification of replies.
-  - Mechanisms for upvoting and downvoting replies.
-  - Association of replies to their respective posts via postID.
-- Relationships:
-  - Implements the **IReplies** interface. Uses the javax.xml.stream.events. Comment for managing comments within a post.
-  - Directly associated with **Post.java** through the post, establishing a clear connection between replies and their parent posts.
-  - Enhances Post.java's functionality by adding depth to post interactions, allowing users to respond to posts with replies, which can themselves be upvoted or downvoted.
+---
 
-  ### AccountInfo
-  AccountInfo.java is a Java class that extends off of Account.java. AccountInfo includes all the miscellaneous details of the Account such as birthdays and pronouns. We will implement this to this project in the future when we ask for user information in the later phases.
-  
-  ### LogIn
-  LogIn.java is a Java class that is used to help facilitate the process of managing Accounts that would be stored via the AccountDatabase class. It's used in conjunction with the Main.java file to create, login, and to check whether the account exists the text file or not. This class also implements the ILogIn interface.
+### 💬 Replies.java
 
-  ### Utils
-  Utils.java is a Java class that we use to translate data stored as Strings in the database into an ArrayList and vice versa. It has methods that are used throughout other classes that need to access .txt files.
+Handles replies to posts:
 
-  ### BadDataException
-  BadDataException was created to report bad data when handling inputs. It extends off of the Exception class and has a String field that says what input error caused the exception to be thrown, this is only for the test case since all data will be processed by the server before entering the txt file.
+- Add/edit/delete replies 🗨️🛠️  
+- Upvote/downvote replies 🎯  
+- Links with posts using `postID`  
+- Implements `IReplies` interface
 
+---
 
+### 👤 AccountInfo.java *(Coming Soon)*
+
+Will include extended user details like pronouns, birthday, etc. 🎂⚧️
+
+---
+
+### 🔐 LogIn.java
+
+Facilitates login flow by checking accounts stored in `AccountDatabase`. Implements `ILogIn` interface.
+
+---
+
+### 🔄 Utils.java
+
+Utility functions for converting between text and object lists (like parsing `.txt` into `ArrayList`). 📃🔁📦
+
+---
+
+### 🚫 BadDataException.java
+
+Custom exception for reporting bad inputs (used in testing). Extends `Exception` and improves reliability 🔍🚨
+
+---
+
+> 🎓 **Built by aspiring engineers to create real-world impact through social technology.**
+> Let’s connect, share, and grow together! 🌱💻
