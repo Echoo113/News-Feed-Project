@@ -1,152 +1,117 @@
-# 💬 CS-180 Project: Social Interaction Platform
+# 💬 CS-180: My Social Media Platform 👩‍💻🌈
 
-## 🚀 Introduction
+> Built with Java, powered by snacks and determination.  
+> (Yes, I made it all by myself 😅)
 
-In today’s digital world, social platforms break communication barriers and bring people together 🌍. This Java-based project aims to create a robust, user-friendly **social interaction platform** where users can post, connect, and engage in meaningful ways 💬🤝.
+---
 
-### 🔑 Key Features
+## 🌟 Introduction
 
-- **👤 New User Account Creation & Secure Login**  
-  Smooth sign-up and password-protected login system ensures safe access to personalized content 🔐.
+Hi! I’m a freshman CS student, and this is my solo project for CS-180: a mini social media platform! 📱✨  
+It lets users create accounts, make posts, comment, and interact — all in a friendly Java GUI.  
+I wanted to challenge myself to build something that feels like a real app, not just homework.  
+Spoiler: it took *a lot* of debugging 😵‍💫
 
-- **📰 Interactive Post & Feed System**  
-  Create posts and see them appear in a personalized feed — with friends’ updates too 🧑‍🤝‍🧑.
+---
 
-- **⚙️ Engagement Tools**  
-  - Upvote/downvote posts 👍👎  
-  - Comment, upvote/downvote comments 💬  
-  - Hide posts 🙈  
-  - Delete your own comments/trash control 🗑️  
+## 🔑 What It Can Do
 
-We’re not just building code — we’re crafting a **community** 💖.
+### 👤 Account Creation & Login
+
+- Sign up with a username and password  
+- Login securely (don’t worry, passwords are safe!) 🔐  
+- Recover your password with security questions
+
+### 📰 Feed & Posting
+
+- Make posts and see them in your feed 📝  
+- Your feed shows posts from you and your friends 💬  
+- You can hide posts too if you’re not feeling them 🙈
+
+### 💬 Interactions
+
+- Upvote/downvote posts 👍👎  
+- Comment on posts, and upvote/downvote those too 🗣️  
+- Delete your own comments when needed (oops moments happen)  
+- Add or remove friends 👯‍♀️  
+- Block/unblock users for peace of mind 😌
 
 ---
 
 ## 🖥️ GUI Instructions
 
-1. ▶️ Click **Run** on `Server.java`
-2. ▶️ Then run `ClientGUI.java`  
-3. 📂 Log in using an existing account from `userFile.txt` or create a new one.
-4. 🧭 Explore the main menu GUI to access all features.
-5. 🚪 When done, click **Logout** to safely exit the program.
+1. Run `Server.java` first 🧠  
+2. Then run `ClientGUI.java` 🎨  
+3. Login or create a new account from the GUI  
+4. Use the menu buttons to explore everything!  
+5. When you’re done, logout and close the app ✨
+
+You’ll need Java 8 or higher to run everything properly!
 
 ---
 
-## 🗄️ Database
+## 🗃️ Database Details
 
-We focus first on building a powerful, thread-safe backend that manages:
+- User accounts and posts are stored in text files (.txt)  
+- Data includes usernames, passwords, friends, blocked users, posts, and comments  
+- Everything is handled with file I/O in Java (classic beginner move, but it works 😎)
 
-- 👥 User profiles & authentication
-- 🤝 Friend/block relationships
-- 📝 Post and comment data
-- 🔒 Concurrency control for multi-client usage
-
-### 🧪 Testing Notes
-
-- `AccountDatabase.java` and `AccountMod.java` offer the same functionality; one is for testing.
-- Testing is done via:
-  - `UserDatabaseTest.java`
-  - Manual: `Main.java`, `MainPost.java`
-  - Auto: `RunLocalTest.java`
-
-### ⚙️ Compilation Steps
-
-1. Compile all interface files
-2. Compile `Account.java`, `Post.java`, `Replies.java`
-3. Compile remaining classes (excluding `Main.java`, `MainPost.java`)
-4. Compile `Main.java`, `MainPost.java` last
+I made sure the system is thread-safe so multiple clients can connect at once. 🔄
 
 ---
 
-## 🧩 Component Breakdown
+## 🧪 Testing (Yes, I tested it... a lot 😭)
 
-### 🌟 Server.java
-
-The core of multi-client interaction — manages sessions, security, and database operations. Handles login, post actions, and ensures secure, concurrent access 🔁🔐.
-
----
-
-### 🪟 ClientGUI.java
-
-Provides a visually appealing and intuitive interface. Key highlights:
-
-- 🔄 Real-time updates
-- 🖱️ Easy navigation
-- ✅ Secure login
-- 🗳️ Interactive buttons (post/comment/upvote)
-- 💻 Requires Java Runtime Environment 8+
+- I used `RunLocalTest.java` to automatically check my classes  
+- `Main.java` and `MainPost.java` are manual test files for account and post creation  
+- You can see results in the `.txt` files after each test!
 
 ---
 
-### 👤 Account.java
+## 📦 Key Java Files
 
-Manages users and their social connections:
+### 🧾 `Account.java`  
+Handles user data like login info, friends, blocklist, and security questions.  
+Implements `IAccount`.
 
-- Sign up / login / recover password 🔑  
-- Add/remove friends 🙋‍♂️❌  
-- Block/unblock users 🚫  
-- Secure Q&A for password recovery ❓  
-- Implements `IAccount` interface
+### 💾 `AccountMod.java`  
+Controls account registration, login, and logout.  
+Implements `IAccountDatabase`.  
+Also takes care of saving data to files 📁
 
----
+### 📝 `Post.java`  
+Manages posts: upvotes/downvotes, view counts, comments, etc.  
+Implements `IPost`.
 
-### 🛠️ AccountMod.java
+### 💬 `Replies.java`  
+Handles replies to posts and their upvotes/downvotes.  
+Works together with `Post.java`.
 
-Handles file-based storage of account data:
+### 🖼️ `ClientGUI.java`  
+The interface users see! Supports post creation, commenting, voting, and more.
 
-- Save/load from files 📁  
-- Friend/block list updates 🤝🚫  
-- Used in backend operations  
-- Implements `IAccountDatabase` interface  
+### 🖧 `Server.java`  
+The brains behind everything! Manages client connections and data exchange.
 
----
+### 🧰 `Utils.java`  
+Reads and writes ArrayLists to/from strings in `.txt` files.
 
-### 📝 Post.java
-
-Represents each post in the platform:
-
-- Upvote/downvote 👍👎  
-- Commenting 🗨️  
-- Track views 🔢  
-- Implements `IPost` interface  
-- Links with `Replies.java` for threaded discussion
+### 🚫 `BadDataException.java`  
+Throws errors when bad input is detected (used mostly during testing).
 
 ---
 
-### 💬 Replies.java
+## 🎁 Future Features
 
-Handles replies to posts:
-
-- Add/edit/delete replies 🗨️🛠️  
-- Upvote/downvote replies 🎯  
-- Links with posts using `postID`  
-- Implements `IReplies` interface
+- Add user profile details like pronouns, birthdays, etc 🎂  
+- Let users search for other users 🔍  
+- Maybe even dark mode? (One day... 😅)
 
 ---
 
-### 👤 AccountInfo.java *(Coming Soon)*
+## 🧡 Final Thoughts
 
-Will include extended user details like pronouns, birthday, etc. 🎂⚧️
+This project taught me *so much* about Java, files, GUIs, and debugging weird bugs at midnight.  
+I'm proud that I made this from scratch as a freshman — and honestly, it was kinda fun 🧋💻
 
----
-
-### 🔐 LogIn.java
-
-Facilitates login flow by checking accounts stored in `AccountDatabase`. Implements `ILogIn` interface.
-
----
-
-### 🔄 Utils.java
-
-Utility functions for converting between text and object lists (like parsing `.txt` into `ArrayList`). 📃🔁📦
-
----
-
-### 🚫 BadDataException.java
-
-Custom exception for reporting bad inputs (used in testing). Extends `Exception` and improves reliability 🔍🚨
-
----
-
-> 🎓 **Built by aspiring engineers to create real-world impact through social technology.**
-> Let’s connect, share, and grow together! 🌱💻
+Thanks for reading! If you're a fellow CS student, good luck and keep building 💪🎉
