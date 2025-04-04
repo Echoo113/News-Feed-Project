@@ -1,117 +1,92 @@
-# 💬  My Social Media Platform 👩‍💻🌈
+# Social Media Platform in Java
 
-> Built with Java, powered by snacks and determination.  
-> (Yes, I made it all by myself 😅)
-
----
-
-## 🌟 Introduction
-
-Hi! This is my freshman-year solo project: a mini social media platform! 📱✨  
-It lets users create accounts, make posts, comment, and interact — all in a friendly Java GUI.  
-I wanted to challenge myself to build something that feels like a real app, not just homework.  
-Spoiler: it took *a lot* of debugging 😵‍💫
+> A full-stack interactive application built with Java — focused on user interaction, GUI development, and file-based data persistence.
 
 ---
 
-## 🔑 What It Can Do
+## Introduction
 
-### 👤 Account Creation & Login
-
-- Sign up with a username and password  
-- Login securely (don’t worry, passwords are safe!) 🔐  
-- Recover your password with security questions
-
-### 📰 Feed & Posting
-
-- Make posts and see them in your feed 📝  
-- Your feed shows posts from you and your friends 💬  
-- You can hide posts too if you’re not feeling them 🙈
-
-### 💬 Interactions
-
-- Upvote/downvote posts 👍👎  
-- Comment on posts, and upvote/downvote those too 🗣️  
-- Delete your own comments when needed (oops moments happen)  
-- Add or remove friends 👯‍♀️  
-- Block/unblock users for peace of mind 😌
+This project is a standalone social media platform developed as a solo effort during my freshman year.  
+It features core social networking functionalities such as user registration, posting, commenting, voting, and friend management — all implemented with a graphical interface using Java Swing.  
+The backend is file-based, emphasizing beginner-friendly techniques while maintaining modularity and thread safety for concurrent users.
 
 ---
 
-## 🖥️ GUI Instructions
+## Features
 
-1. Run `Server.java` first 🧠  
-2. Then run `ClientGUI.java` 🎨  
-3. Login or create a new account from the GUI  
-4. Use the menu buttons to explore everything!  
-5. When you’re done, logout and close the app ✨
+### Account Creation & Login
+- Register a new account with a username and password
+- Secure login process
+- Password recovery via security questions
 
-You’ll need Java 8 or higher to run everything properly!
+### Feed & Posting
+- Create and view posts
+- Feed displays posts from self and friends
+- Option to hide individual posts
 
----
-
-## 🗃️ Database Details
-
-- User accounts and posts are stored in text files (.txt)  
-- Data includes usernames, passwords, friends, blocked users, posts, and comments  
-- Everything is handled with file I/O in Java (classic beginner move, but it works 😎)
-
-I made sure the system is thread-safe so multiple clients can connect at once. 🔄
+### Interaction System
+- Upvote and downvote posts and comments
+- Add comments and delete your own
+- Manage friendships (add/remove)
+- Block or unblock users
 
 ---
 
-## 🧪 Testing (Yes, I tested it... a lot 😭)
+## GUI Instructions
 
-- I used `RunLocalTest.java` to automatically check my classes  
-- `Main.java` and `MainPost.java` are manual test files for account and post creation  
-- You can see results in the `.txt` files after each test!
+1. Run `Server.java`
+2. Then launch `ClientGUI.java`
+3. Log in or create a new account through the interface
+4. Use menu buttons to access posts, friends, and account options
+5. Logout and close the client when finished
 
----
-
-## 📦 Key Java Files
-
-### 🧾 `Account.java`  
-Handles user data like login info, friends, blocklist, and security questions.  
-Implements `IAccount`.
-
-### 💾 `AccountMod.java`  
-Controls account registration, login, and logout.  
-Implements `IAccountDatabase`.  
-Also takes care of saving data to files 📁
-
-### 📝 `Post.java`  
-Manages posts: upvotes/downvotes, view counts, comments, etc.  
-Implements `IPost`.
-
-### 💬 `Replies.java`  
-Handles replies to posts and their upvotes/downvotes.  
-Works together with `Post.java`.
-
-### 🖼️ `ClientGUI.java`  
-The interface users see! Supports post creation, commenting, voting, and more.
-
-### 🖧 `Server.java`  
-The brains behind everything! Manages client connections and data exchange.
-
-### 🧰 `Utils.java`  
-Reads and writes ArrayLists to/from strings in `.txt` files.
-
-### 🚫 `BadDataException.java`  
-Throws errors when bad input is detected (used mostly during testing).
+> Requires Java 8 or higher.
 
 ---
 
-## 🎁 Future Features
+## Data Storage
 
-- Add user profile details like pronouns, birthdays, etc 🎂  
-- Let users search for other users 🔍  
-- Maybe even dark mode? (One day... 😅)
+- User data and posts are stored in `.txt` files
+- Handles usernames, passwords, friend lists, blocklists, posts, and comments
+- All file I/O is implemented manually
+- Thread-safe to support multiple clients
 
 ---
 
-## 🧡 Final Thoughts
+## Testing
 
-This project taught me *so much* about Java, files, GUIs, and debugging weird bugs at midnight.  
-I'm proud that I made this from scratch as a freshman — and honestly, it was kinda fun 🧋💻
+- `RunLocalTest.java`: Unit tests for core functionalities
+- `Main.java`, `MainPost.java`: Manual testing tools for user and post creation
+- Test results are written to local data files
 
-Thanks for reading! If you're a fellow CS student, good luck and keep building 💪🎉
+---
+
+## Key Java Files
+
+| File              | Purpose                                                             |
+|-------------------|---------------------------------------------------------------------|
+| `Account.java`     | Stores user info, friends, blocklist, and security questions       |
+| `AccountMod.java`  | Handles registration, login, and data persistence                  |
+| `Post.java`        | Manages posts, voting, and comment tracking                        |
+| `Replies.java`     | Controls post replies and their interactions                       |
+| `ClientGUI.java`   | Main graphical interface                                            |
+| `Server.java`      | Manages client-server communication and request handling           |
+| `Utils.java`       | Provides helper functions for file I/O                             |
+| `BadDataException.java` | Custom error class for input validation                        |
+
+---
+
+## Planned Improvements
+
+- Add user profiles with custom fields (e.g., pronouns, birthdays)
+- Implement user search functionality
+- Optional dark mode
+
+---
+
+## Final Thoughts
+
+This project taught me valuable lessons in Java development, GUI design, file I/O, and debugging.  
+What started as a challenge turned into a rewarding experience that strengthened my understanding of full-stack design principles.
+
+Feel free to explore the codebase or reach out with feedback or questions.
