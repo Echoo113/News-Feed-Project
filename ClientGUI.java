@@ -1465,7 +1465,7 @@ public class ClientGUI implements IClientGUI {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(20, 20, 20, 20);
 
-        // 设置标签和输入框：用户名
+
         JLabel userLabel = new JLabel("Enter the username:");
         userLabel.setFont(new Font("Arial", Font.BOLD, 18));
         JTextField userField = new JTextField(20);
