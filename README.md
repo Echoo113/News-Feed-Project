@@ -7,7 +7,7 @@
 
 ## 🌟 Introduction
 
-Hi! I’m a freshman CS student, and this is my solo project: a mini social media platform! 📱✨  
+Hi! This is my freshman-year solo project: a mini social media platform! 📱✨  
 It lets users create accounts, make posts, comment, and interact — all in a friendly Java GUI.  
 I wanted to challenge myself to build something that feels like a real app, not just homework.  
 Spoiler: it took *a lot* of debugging 😵‍💫
